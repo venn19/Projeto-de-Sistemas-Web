@@ -1,0 +1,30 @@
+{% extends 'hospitais/baselist.html' %}
+
+{% block content %}
+
+<div>
+	<table>
+		<thead>
+			<tr>
+				<th>Nome do Hospital</th>
+				<th>Foto</th>
+				<th>Tipo Hospital</th>
+				<th>Conceito Hospital</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for hospital in hospitais %}
+			<tr>
+				<td>{{hospital.nome_hospitais}}</td>
+				<td><img src="{{hospital.foto_url}}" alt=""></td>
+				<td>{{hospital.tipo_hospitais}}</td>
+				<td>{{hospital.conceito_hospitais}}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div> 
+
+{{hospitais}}
+
+{% endblock content %}
